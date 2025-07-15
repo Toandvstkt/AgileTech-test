@@ -1,0 +1,138 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.featureSection {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #212353;
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #4d5e6f;
+  margin-bottom: 56px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 50px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 24px;
+  max-width: 530px;
+  min-height: 358px;
+  margin: auto;
+  .bgImage {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 443px;
+    height: 358px;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  .imageWrapper {
+
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .content {
+    padding-top: 50px;
+    position: relative;
+    z-index: 1;
+    max-width: 220px;
+    text-align: left;
+
+    h3 {
+      font-size: 18px;
+      color: #212353;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #4d5e6f;
+      line-height: 1.6;
+    }
+
+    .link {
+      font-weight: 600;
+      color: #212353;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #9c69e2;
+      }
+    }
+  }
+
+  @include desktop {
+    .imageWrapper {
+      position: absolute;
+      top: 50px;
+      left: -85px;
+      width: 240px;
+      z-index: 1;
+    }
+
+    .content {
+      margin-left: 180px;
+    }
+  }
+
+  @include mobile {
+    padding: 24px;
+
+    .imageWrapper {
+      position: static;
+      margin-bottom: 16px;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 180px;
+        margin: 0 auto;
+      }
+    }
+    .bgImage {
+      display: none;
+    }
+  }
+}

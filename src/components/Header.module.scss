@@ -1,0 +1,121 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.header {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    @include desktop {
+    padding: 24px 64px;
+    }
+    @include mobile {
+    padding: 24px;
+    }
+}
+
+.logo {
+  width: 49px;
+  height: 35px;
+}
+
+.dot1 {
+  width: 12px;
+  height: 12px;
+  background-color: #a259ff;
+  border-radius: 50%;
+}
+
+.dot2 {
+  width: 12px;
+  height: 24px;
+  background-color: #ff66c4;
+  border-radius: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+
+  a {
+    text-decoration: none;
+    color: #2f3a4c;
+    font-size: 16px;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:active {
+      color: #9c69e2;
+    }
+  }
+}
+
+.signInBtn {
+  padding: 14px 32px;
+  background-color: #9c69e2;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(156, 105, 226, 0.3);
+  transition: background 0.2s;
+}
+
+.signInBtn:hover {
+  background-color: #7f4cc4;
+}
+
+.authButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.burger {
+  display: none;
+  font-size: 24px;
+  color: #2f3a4c;
+  cursor: pointer;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+
+    button {
+      padding: 12px;
+      background-color: #9C69E2;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+}
+
+.authButtons {
+  display: flex;
+  gap: 16px;
+
+  @include mobile {
+    display: none;
+  }
+}

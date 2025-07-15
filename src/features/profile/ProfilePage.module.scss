@@ -1,0 +1,130 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.wrapper {
+    height: 100vh;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    @include desktop {
+        
+        display: flex;
+  }
+}
+
+.sidebar {
+    background-color: #e5e5e5;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-sizing: border-box;
+    @include desktop {
+        width: 320px;
+  }
+.logo {
+    width: 49px;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0.5rem 0;
+      font-size: 20px;
+      color: #212353;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .logoutBtn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    padding: 0;
+    color: #212353;
+  }
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+
+  .addButton {
+    background-color: #a25efc;
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 252px;
+    height: 58px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 35px;
+    justify-content: space-between;
+    @include mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  &:last-child {
+    margin: 0;
+  }
+
+  @include desktop {
+  width: 368px;
+  margin-right: 43px;
+
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+    justify-content: right;
+  .pageBtn {
+    padding: 6px 12px;
+    font-size: 20px;
+    border: 1px solid #999;
+    background-color: white;
+    cursor: pointer;
+
+    &.active {
+      background-color: #9c69e2;
+      color: white;
+      border-color: #9c69e2;
+    }
+  }
+}

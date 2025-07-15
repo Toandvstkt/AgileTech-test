@@ -1,0 +1,55 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalForm {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 90%;
+
+    @include desktop {
+        width: 1000px;
+    }
+}
+
+.modalForm input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.modalForm button {
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modalForm button[type="submit"] {
+    background-color: #9c69e2;
+    color: white;
+}
+
+.modalForm button[type="button"] {
+    background-color: #eee;
+    color: #333;
+}

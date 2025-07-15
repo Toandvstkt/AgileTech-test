@@ -1,0 +1,30 @@
+
+
+@mixin buttonPrimary {
+  background-color: #9c69e2;
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: $font-medium;
+  border-radius: 9999px;
+  font-size: $fs-16;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: #7f4cc4;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1170px) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+  @media (max-width: 1169.98px) {
+    @content;
+  }
+}
