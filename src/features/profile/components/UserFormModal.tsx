@@ -5,7 +5,7 @@ import styles from './UserFormModal.module.scss';
 interface UserFormModalProps {
   onSubmit: (user: User | Omit<User, 'id'>) => void;
   onClose: () => void;
-  initialData?: User; // <- Cập nhật: để khi update thì có id
+  initialData?: User;
 }
 
 const UserFormModal = ({ onSubmit, onClose, initialData }: UserFormModalProps) => {
@@ -34,9 +34,9 @@ const UserFormModal = ({ onSubmit, onClose, initialData }: UserFormModalProps) =
     };
 
     if (initialData?.id) {
-      onSubmit({ ...formData, id: initialData.id }); // <-- update
+      onSubmit({ ...formData, id: initialData.id });
     } else {
-      onSubmit(formData); // <-- add
+      onSubmit(formData);
     }
   };
 

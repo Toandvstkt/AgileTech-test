@@ -35,18 +35,12 @@
 .button:hover {
   background-color: #7f4cc4;
 }
-.imageWrapper {
-
-}
 .imageWrapper img {
   height: auto;
   max-width: 100%;
 }
 
 @include desktop {
-  .hero {
-  }
-
   .wrapper {
   max-width: 1170px;
   margin: 0 auto;
